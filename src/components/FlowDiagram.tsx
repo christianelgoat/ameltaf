@@ -41,7 +41,7 @@ export function FlowDiagram({ stages, activeStageId, onStageClick }: FlowDiagram
                 whileTap={{ scale: 0.98 }}
                 onClick={() => onStageClick(stage.id)}
                 className={cn(
-                  "relative flex flex-col items-center justify-center p-6 w-56 rounded-3xl border-2 transition-all duration-300 shadow-sm outline-none text-left",
+                  "relative flex flex-col items-center justify-center p-5 w-48 rounded-3xl border-2 transition-all duration-300 shadow-sm outline-none text-left",
                   isActive 
                     ? "border-terracotta bg-white shadow-lg ring-4 ring-terracotta/10" 
                     : "border-transparent bg-white hover:border-coffee-medium/20"
@@ -52,16 +52,16 @@ export function FlowDiagram({ stages, activeStageId, onStageClick }: FlowDiagram
                 </div>
                 
                 <div className={cn(
-                  "p-4 rounded-2xl mb-4 transition-colors",
+                  "p-3.5 rounded-2xl mb-3 transition-colors",
                   isActive ? "bg-terracotta text-white" : "bg-bg-warm text-coffee-medium"
                 )}>
-                  <Icon className="w-8 h-8" />
+                  <Icon className="w-7 h-7" />
                 </div>
                 
-                <h3 className="text-center font-serif font-semibold text-lg text-coffee-dark mb-1 leading-tight">
+                <h3 className="text-center font-serif font-semibold text-base text-coffee-dark mb-1 leading-tight">
                   {stage.title}
                 </h3>
-                <p className="text-center text-xs font-medium text-coffee-medium uppercase tracking-widest opacity-70">
+                <p className="text-center text-[0.7rem] font-medium text-coffee-medium uppercase tracking-widest opacity-70">
                   {stage.subtitle}
                 </p>
                 
